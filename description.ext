@@ -1,0 +1,39 @@
+enableDebugConsole = 1;
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		// States remoteExec: 0-off, 1-enabled, taking into account the white list, 2-enabled, however, ignoring whitelists (by default because of backwards compatibility)
+		mode = 2;
+		// The ability to send jeep messages: 0-disabled, 1-enabled (default)
+		jip = 1;
+
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class ace_slideshow_fnc_createSlideshow	{ allowedTargets = 0;};	
+		class ace_slideshow_fnc_addSlideActions	{ allowedTargets = 0;};	
+		class ace_slideshow_fnc_autoTransition	{ allowedTargets = 0;};	
+		class ace_slideshow_fnc_moduleInit	{ allowedTargets = 0;};	
+		class ASN_fnc_controlPanel { allowedTargets = 2;};
+		class pmrl_quest_fnc_databaseInfos { allowedTargets = 2;};
+		class pmrl_quest_fnc_receivedInfos { allowedTargets = 0;};
+		class pmrl_quest_fnc_updateDatabase { allowedTargets = 2;};
+		class ALX_MakeDialog { allowedTargets = 0;};
+		class ALX_MakeDialog_blue { allowedTargets = 0;};
+		class SAFE_fnc_MakeDialog_blue { allowedTargets = 0;};
+		class SAFE_fnc_MakeDialog { allowedTargets = 0;};	
+		class HashCode_Shop_HideUnitGlobal { allowedTargets = 2; };
+		class HashCode_Shop_BuyReq { allowedTargets = 2; };
+		class HashCode_Shop_SellReq { allowedTargets = 2; };
+		class HashCode_Shop_ShowUnit { allowedTargets = 1; };
+		class HashCode_Shop_Answer { allowedTargets = 1; };
+		class HashCodeServer_StartLocker								{ allowedTargets = 2; };
+		class HashCodeServer_Locker_PutReq								{ allowedTargets = 2; };
+		class HashCodeServer_Locker_TakeReq								{ allowedTargets = 2; };
+		class HashCodeClient_Locker_ReceiveData							{ allowedTargets = 1; };
+		class HashCodeClient_Locker_Answer								{ allowedTargets = 1; };
+	};
+};
