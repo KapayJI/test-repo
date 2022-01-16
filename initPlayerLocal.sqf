@@ -1,1 +1,1 @@
-//[player, "\updateDB.sqf"] remoteExec ["execVM", 2]
+//[player, "\updateDB.sqf"] remoteExec ["execVM", 2];
